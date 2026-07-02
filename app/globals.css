@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  /* カラートークン — 静かで正確なコンソール × 社内報 */
+  --color-paper: #f6f7f4;
+  --color-ink: #21262e;
+  --color-ink-soft: #5d6570;
+  --color-line: #dcdfd8;
+  --color-brand: #146b5b;
+  --color-brand-soft: #e4efe9;
+  --color-card: #ffffff;
+
+  /* タイポグラフィトークン（next/font が CSS 変数を注入する） */
+  --font-display: var(--font-zen-kaku), "Zen Kaku Gothic New", sans-serif;
+  --font-sans: var(--font-plex-sans), "IBM Plex Sans JP", sans-serif;
+  --font-mono: var(--font-plex-mono), "IBM Plex Mono", monospace;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+/* キーボードフォーカスの可視化 */
+:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
